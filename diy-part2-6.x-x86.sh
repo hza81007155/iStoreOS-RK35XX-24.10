@@ -23,6 +23,9 @@
 #CONFIG_PACKAGE_luci-nginx=y
 #CONFIG_PACKAGE_default-settings=y" >> .config
 
+# luci-app-daed
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
+
 
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
