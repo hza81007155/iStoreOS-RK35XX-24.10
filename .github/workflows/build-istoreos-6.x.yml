@@ -9,7 +9,7 @@ on:
         # required: false
         # default: 'false'
   schedule:
-   - cron: 30 23 * * *
+   - cron: 30 23 5 * *
 
 env:
   REPO_URL: https://github.com/istoreos/istoreos
