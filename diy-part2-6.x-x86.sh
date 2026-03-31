@@ -23,9 +23,6 @@
 #CONFIG_PACKAGE_luci-nginx=y
 #CONFIG_PACKAGE_default-settings=y" >> .config
 
-# luci-app-openclaw
-git clone --depth=1 -b main https://github.com/10000ge10000/luci-app-openclaw.git package/luci-app-openclaw
-
 
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
