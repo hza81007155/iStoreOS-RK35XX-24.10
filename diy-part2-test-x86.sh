@@ -25,7 +25,7 @@
 
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
-CONFIG_KPROBES=y" >> target/linux/x86/64/config-6.12
+CONFIG_KPROBES=y" >> target/linux/x86/64/config-6.6
 
 # Argon theme
 rm -rf feeds/luci/themes/luci-theme-argon
