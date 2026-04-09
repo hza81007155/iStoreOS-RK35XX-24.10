@@ -34,6 +34,8 @@ echo "CONFIG_PACKAGE_coremark=y" >> .config
 cp -f $GITHUB_WORKSPACE/configfiles/coremark/coremark-x86.sh package/base-files/files/bin/coremark.sh
 chmod 755 package/base-files/files/bin/coremark.sh
 
+# 添加passwall插件
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 
 # iStoreOS-settings
 git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings package/default-settings
