@@ -55,7 +55,7 @@ fi
 
 # ========== 一键更换 Argon 背景 ==========
 cd openwrt
-wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://raw.githubusercontent.com/danshui888/MyActions/main/bg/istoreos.jpg
+wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://github.com/hza81007155/iStoreOS-24.10/blob/dc2e658be20c44b98bdd96528b7879f3583836aa/bg1.jpg
 rm -rf build_dir/target-*/luci-theme-argon-*
 # =======================================
 # 修改版本为编译日期，数字类型。
