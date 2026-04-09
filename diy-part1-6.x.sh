@@ -55,7 +55,7 @@ fi
 
 # ========== 更换 Argon 背景 ==========
 #rm -rf feeds/luci/themes/luci-theme-argon
-p -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 # =======================================
 
 # 修改默认IP
