@@ -53,11 +53,16 @@ else
     exit 1
 fi
 
-# ========== 一键更换 Argon 背景 ==========
-cd openwrt
-wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://github.com/hza81007155/iStoreOS-24.10/blob/dc2e658be20c44b98bdd96528b7879f3583836aa/bg1.jpg
-rm -rf build_dir/target-*/luci-theme-argon-*
+# ========== 更换 Argon 背景 ==========
+#rm -rf feeds/luci/themes/luci-theme-argon
+cp -f $GITHUB_WORKSPACE/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+#wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://github.com/hza81007155/iStoreOS-24.10/blob/dc2e658be20c44b98bdd96528b7879f3583836aa/bg1.jpg
+
 # =======================================
+
+# 修改默认IP
+sed -i 's/192.168.100.1/192.168.10.12/g' package/base-files/files/bin/config_generate
+
 # 修改版本为编译日期，数字类型。
 date_version=$(date +"%Y%m%d%H")
 echo $date_version > version
