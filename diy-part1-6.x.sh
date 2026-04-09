@@ -55,7 +55,7 @@ fi
 
 # ========== 更换 Argon 背景 ==========
 #rm -rf feeds/luci/themes/luci-theme-argon
-cp -f $GITHUB_WORKSPACE/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+cp -f $GITHUB_WORKSPACE/bg1.jpg feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 #wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://github.com/hza81007155/iStoreOS-24.10/blob/dc2e658be20c44b98bdd96528b7879f3583836aa/bg1.jpg
 
 # =======================================
