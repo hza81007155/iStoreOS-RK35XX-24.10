@@ -53,6 +53,11 @@ else
     exit 1
 fi
 
+# ========== 一键更换 Argon 背景 ==========
+cd openwrt
+wget -O feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/background.jpg https://raw.githubusercontent.com/danshui888/MyActions/main/bg/istoreos.jpg
+rm -rf build_dir/target-*/luci-theme-argon-*
+# =======================================
 # 修改版本为编译日期，数字类型。
 date_version=$(date +"%Y%m%d%H")
 echo $date_version > version
