@@ -23,12 +23,6 @@
 #CONFIG_PACKAGE_luci-nginx=y
 #CONFIG_PACKAGE_default-settings=y" >> .config
 
-# 修改版本为编译日期
-date_version=$(date +"%y.%m.%d")
-orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/R${date_version} by hza800755/g" package/lean/default-settings/files/zzz-default-settings
-
-
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
 CONFIG_KPROBES=y" >> target/linux/x86/64/config-6.12
