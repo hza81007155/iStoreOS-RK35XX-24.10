@@ -53,11 +53,6 @@ else
     exit 1
 fi
 
-# ========== 更换 Argon 背景 ==========
-#rm -rf feeds/luci/themes/luci-theme-argon
-cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
-# =======================================
-
 # 修改默认IP
 sed -i 's/192.168.100.1/192.168.10.12/g' package/base-files/files/bin/config_generate
 
