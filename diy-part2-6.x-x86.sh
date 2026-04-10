@@ -27,9 +27,7 @@ CONFIG_PACKAGE_default-settings=y" >> .config
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
 CONFIG_KPROBES=y" >> target/linux/x86/64/config-6.6
-# luci-theme-argon
-rm -rf feeds/luci/themes/luci-theme-argon
-git clone --depth=1 -b master https://github.com/hza81007155/luci-theme-argon
+
 # 集成CPU性能跑分脚本
 echo "CONFIG_PACKAGE_coremark=y" >> .config
 cp -f $GITHUB_WORKSPACE/configfiles/coremark/coremark-x86.sh package/base-files/files/bin/coremark.sh
