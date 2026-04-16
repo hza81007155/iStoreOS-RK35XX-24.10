@@ -23,6 +23,9 @@ CONFIG_PACKAGE_nginx-mod-luci=y
 CONFIG_PACKAGE_luci-nginx=y
 CONFIG_PACKAGE_default-settings=y" >> .config
 
+# passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
 
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
