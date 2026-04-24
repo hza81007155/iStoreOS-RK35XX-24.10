@@ -31,16 +31,6 @@ rm -rf feeds/luci/applications/luci-app-passwall
 # 2.克隆Passwall核心包+LuCI
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-
-# 3.选中Passwall及依赖
-make menuconfig <<EOF
-CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
-CONFIG_PACKAGE_coreutils-base64=y
-CONFIG_PACKAGE_xray-core=y
-CONFIG_PACKAGE_v2ray-geodata=y
-CONFIG_PACKAGE_sing-box=y
-EOF
 ----------------------------------------------------------------------
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
