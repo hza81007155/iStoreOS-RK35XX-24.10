@@ -22,16 +22,13 @@ CONFIG_PACKAGE_nginx-util=y
 CONFIG_PACKAGE_nginx-mod-luci=y
 CONFIG_PACKAGE_luci-nginx=y
 CONFIG_PACKAGE_default-settings=y" >> .config
----------------------------------------------------------------------
-# Passwall插件
-# 1.清理冲突包（必须，解决coreutils-base64等依赖冲突）
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,ssocks,trojan-go,trojan-plus,xray-plugin}
-rm -rf feeds/luci/applications/luci-app-passwall
 
-# 2.克隆Passwall核心包+LuCI
+# Passwall插件
+rm -rf tmp/ package/passwall-packages/
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-----------------------------------------------------------------------
+./scripts/feeds install golang golang-stdlib
+
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
 CONFIG_KPROBES=y" >> target/linux/x86/64/config-6.6
