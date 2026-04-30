@@ -6,6 +6,24 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #===============================================
+# ==============================================
+# 删除 iStoreOS 自带 argon 主题
+# ==============================================
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
+rm -rf package/luci-theme-argon
+rm -rf package/luci-app-argon-config
+
+./scripts/feeds uninstall luci-theme-argon
+./scripts/feeds uninstall luci-app-argon-config
+
+# ==============================================
+# 拉取新 argon 主题
+# ==============================================
+git clone --depth=1 -b master https://github.com/hza81007155/luci-theme-argon.git package/luci-theme-argon
+
+# 同时拉取配套设置插件（必须）
+git clone --depth=1 -b master https://github.com/hza81007155/luci-app-argon-config.git package/luci-app-argon-config
 
 # 修改uhttpd配置文件，启用nginx
 # sed -i "/.*uhttpd.*/d" .config
