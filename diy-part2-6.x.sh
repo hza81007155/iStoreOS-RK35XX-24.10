@@ -28,6 +28,8 @@ cp -f $GITHUB_WORKSPACE/configfiles/coremark/coremark-arm64.sh package/base-file
 chmod 755 package/base-files/files/bin/coremark-arm64
 chmod 755 package/base-files/files/bin/coremark.sh
 
+# 更换默认背景
+cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 复制dts设备树文件到指定目录下
 cp -a $GITHUB_WORKSPACE/configfiles/dts/rk3588/* target/linux/rockchip/dts/rk3588/
