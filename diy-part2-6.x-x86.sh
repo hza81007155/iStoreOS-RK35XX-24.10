@@ -41,6 +41,8 @@ CONFIG_PACKAGE_nginx-mod-luci=y
 CONFIG_PACKAGE_luci-nginx=y
 CONFIG_PACKAGE_default-settings=y" >> .config
 
+# 更换默认背景
+#cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 追加自定义内核配置项
 echo "CONFIG_PSI=y
