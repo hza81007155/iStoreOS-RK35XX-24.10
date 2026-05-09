@@ -1,4 +1,4 @@
-name: Build iStore OS X86-st
+name: Build iStore OS X86-mini
 
 on:
   repository_dispatch:
